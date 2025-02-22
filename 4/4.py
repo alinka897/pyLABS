@@ -6,8 +6,8 @@ def func(n,m):
     for line in range(10):
         a = str(random.randint(-50,50))
         b = str(random.randint(-50,50))
-        f1.write(a)
-        f2.write(b)
+        f1.write(a+'\n')
+        f2.write(b+'\n')
         print(a+"\t"+b)
     f1.close()
     f2.close()
