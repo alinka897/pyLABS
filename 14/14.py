@@ -1,3 +1,7 @@
+"""
+Объяснить алгоритм,
+переделать, чтобы файл читался целиком
+"""
 from collections import deque
 from collections import Counter
 
@@ -15,10 +19,11 @@ try:
                 else:
                     if slowo[-1] in ',.?!:;\'"':
                         slowo = slowo[:-1]
-                    elif slowo[-3:] == '...':
-                        slowo = slowo[:-3]
-                    elif slowo[0] in '"\'':
+                    if slowo[-2:] == '..':
+                        slowo = slowo[:-2]
+                    if slowo[0] in '"\'':
                         slowo = slowo[1:]
+                    slowo = slowo.lower()
                     slowo_d = deque(slowo)
                     while len(slowo_d) >= delta:
                         st_final.append(''.join(slowo_d)[0:delta])
