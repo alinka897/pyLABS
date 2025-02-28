@@ -6,8 +6,11 @@ Print the item with minimal sum.
 
 import random
 
-d = {x: [random.randint(-100,100) for i in range(5)] for x in range(4)}
-print(d)
-for k, v in d.items():
-    if v == min(d.values(), key = sum):
-        print(k, v)
+def min_item():
+    d = {x: [random.randint(-100,100) for i in range(5)] for x in range(4)}
+    print(d)
+    for k, v in d.items():
+        if v == min(d.values(), key = sum):
+            print(k, v)
+
+min_item()

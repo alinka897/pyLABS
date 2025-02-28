@@ -4,9 +4,9 @@ and print them in 2 columns
 """
 import random
 
-def func(n, m):
-    f1 = open(n, 'w')
-    f2 = open(m, 'w')
+def func(file_name1, file_name2):
+    f1 = open(file_name1, 'w')
+    f2 = open(file_name2, 'w')
     for line in range(10):
         a = str(random.randint(-50,50))
         b = str(random.randint(-50,50))
@@ -16,6 +16,6 @@ def func(n, m):
     f1.close()
     f2.close()
 
-f1 = input("Enter the path to the first file: ")
-f2 = input("Enter the path to the second file: ")
+name1 = input("Enter the path to the first file: ")
+name2 = input("Enter the path to the second file: ")
 func(f1, f2)
