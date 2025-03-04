@@ -2,6 +2,8 @@
 Объяснить алгоритм,
 переделать, чтобы файл читался целиком
 """
+
+import string
 from collections import deque
 from collections import Counter
 
@@ -17,12 +19,9 @@ def seq_count(file_name, delta):
                     elif slowo[0].isdigit() is True:
                         continue
                     else:
-                        if slowo[-1] in ',.?!:;\'"':
-                            slowo = slowo[:-1]
+                        slowo = slowo.strip(string.punctuation)
                         if slowo[-2:] == '..':
                             slowo = slowo[:-2]
-                        if slowo[0] in '"\'':
-                            slowo = slowo[1:]
                         slowo = slowo.lower()
                         slowo_d = deque(slowo)
                         while len(slowo_d) >= delta:
