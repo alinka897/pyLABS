@@ -1,6 +1,6 @@
 """
-Объяснить алгоритм,
-переделать, чтобы файл читался целиком
+Объяснить алгоритм.
+Переделать, чтобы файл читался целиком.
 """
 
 import string
@@ -31,6 +31,7 @@ def seq_count(file_name, delta):
         print('Нет такого файла')
     print(Counter(st_final).most_common(68))
 
-file_name = input('Введите имя файла: ')
-delta = int(input('Введите длину новой последовательности (2-8): '))
-seq_count(file_name, delta)
+if __name__ == '__main__':
+    file_name = input('Введите имя файла: ')
+    delta = int(input('Введите длину новой последовательности (2-8): '))
+    seq_count(file_name, delta)
