@@ -1,14 +1,14 @@
 """
-Объяснить алгоритм.
+14. Объяснить алгоритм.
 Переделать, чтобы файл читался целиком.
 """
 
-import string
-from collections import deque
-from collections import Counter
 
 def seq_count(file_name, delta):
-    st_final = [] # for final result
+    import string
+    from collections import deque
+    from collections import Counter
+    st_final = []
     try:
         with open(file_name) as f:
             my_file = f.readlines()
@@ -31,7 +31,6 @@ def seq_count(file_name, delta):
         print('Нет такого файла')
     print(Counter(st_final).most_common(68))
 
+
 if __name__ == '__main__':
-    file_name = input('Введите имя файла: ')
-    delta = int(input('Введите длину новой последовательности (2-8): '))
-    seq_count(file_name, delta)
+    seq_count('text.txt', 5)
